@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LibraryGuard
@@ -57,7 +58,7 @@ namespace LibraryGuard
                     }
                     catch
                     {
-                        Logger.Warn(string.Format("File name access deniel for {pName}", p.ProcessName));
+                        Logger.Warn(string.Format("File name access deniel for {0}", p.ProcessName));
                     }
                 }
             }
@@ -77,10 +78,19 @@ namespace LibraryGuard
             foreach (string fileName in _protectedProcessFileNames)
             {
                 if (!isRunning(fileName))
-                {                    
+                {   
+                    Logger.Info(string.Format("Starting process {0}",fileName));
                     Process.Start(fileName);
-                    Logger.Info(string.Format("Start process {0}",fileName));
+                    Logger.Info(string.Format("Started process {0}", fileName));
                 }
+            }
+        }
+        public void protectProcess()
+        {
+            while (true)
+            {
+                runDeadProcess();
+                Thread.Sleep(100);
             }
         }
     }

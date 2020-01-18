@@ -25,7 +25,8 @@ namespace LibraryGuard.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\LibraryGuard\\test.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\win10\\Documents\\Visual Studio 2015\\Projects\\NetCafeAgent\\NetCafeAgent\\bi" +
+            "n\\Debug\\NetCafeAgent.exe")]
         public string protectedProcessFileNames {
             get {
                 return ((string)(this["protectedProcessFileNames"]));

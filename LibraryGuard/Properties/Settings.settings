@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="protectedProcessFileNames" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Program Files\LibraryGuard\test.exe</Value>
+      <Value Profile="(Default)">C:\Users\win10\Documents\Visual Studio 2015\Projects\NetCafeAgent\NetCafeAgent\bin\Debug\NetCafeAgent.exe</Value>
     </Setting>
   </Settings>
 </SettingsFile>

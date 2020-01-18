@@ -25,11 +25,7 @@ namespace LibraryGuard
 
             string[] protectedProcessFileNames = Properties.Settings.Default.protectedProcessFileNames.ToString().Split(';');
             ProcessGuard pGuard = new ProcessGuard(protectedProcessFileNames);
-            while (true)
-            {
-                pGuard.runDeadProcess();
-                Thread.Sleep(100);
-            }
+            pGuard.protectProcess();
         }
     }
 }
